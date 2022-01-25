@@ -1,22 +1,24 @@
+import { useState } from "react";
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
-import { useState } from "react";
+
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
   const images = [
-    "/img/p7.png",
-    "/img/p5.png",
-    "/img/p4.png",
+    "/img/p8.jpg",
+    "/img/p7.jpg",
+    "/img/p7.jpg",
   ];
 
   const handleArrow = (direction) =>{
       if(direction==="l"){
-          setIndex(index !== 0 ? index-1 : 2)
+          setIndex(index !== 0 ? index-1 : 1)
       }
       if(direction==="r"){
-          setIndex(index !== 2 ? index+1 : 0)
+          setIndex(index !== 2 ? index+1 : 1)
       }
+      
   }
 
   return (
@@ -37,4 +39,5 @@ const Featured = () => {
     </div>
   );
 };
+
 export default Featured;
